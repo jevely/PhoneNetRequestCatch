@@ -45,7 +45,7 @@ private EditText edit;
             public void onClick(View v) {
                 String path = edit.getText().toString();
                 if(TextUtils.isEmpty(path)){
-                    webView.loadUrl("https://nba.hupu.com/");
+                    webView.loadUrl("https://d1ya3pnv.com/MV3qpdrN?campaign=10139&sub_aff={app_id}&device_id={device_id}&sub_sub={task_id}&sub_aff3=EZ");
                 }else{
                     webView.loadUrl(path);
                 }

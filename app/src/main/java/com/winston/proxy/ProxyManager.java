@@ -10,6 +10,7 @@ import net.lightbody.bmp.filters.RequestFilter;
 import net.lightbody.bmp.util.HttpMessageContents;
 import net.lightbody.bmp.util.HttpMessageInfo;
 
+import java.util.Arrays;
 import java.util.Map;
 
 import io.netty.handler.codec.http.HttpHeaders;
@@ -53,13 +54,13 @@ public class ProxyManager implements RequestFilter {
 
         Logger.d("拦截的url:" + method + " - " + url);
         Logger.d("request.getUri()) = " + request.getUri());
-        Logger.d("messageInfo.getOriginalUrl() = " + messageInfo.getOriginalUrl());
-        Logger.d("messageInfo.getUrl() = " + messageInfo.getUrl());
         Logger.d("contents.getContentType() = " + contents.getContentType());
         Logger.d("contents.getTextContents() = " + contents.getTextContents());
-        Logger.d("contents.getBinaryContents() = " + contents.getBinaryContents().toString());
+        Logger.d("contents.getBinaryContents()1 = " + contents.getBinaryContents().length);
+        Logger.d("contents.getBinaryContents()2 = " + Arrays.toString(contents.getBinaryContents()));
+        Logger.d("+++++++++++++++++");
         for (Map.Entry<String, String> header : headers) {
-            Logger.d(header.getKey() + " - " + header.getValue());
+            Logger.d(header.getKey() + " = " + header.getValue());
 //            if (header.getKey().equals("X-Requested-With")) {// handle requests from "every" WebView
 //
 //            }
